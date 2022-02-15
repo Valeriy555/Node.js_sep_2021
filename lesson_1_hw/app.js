@@ -59,20 +59,20 @@ const change = () => {
         }
 
 
-        fs.readFile(path.join(__dirname, 'main', 'online', 'online.txt'), (err1, data1) => {
-            if (err1) {
-                console.log(err1)
+        fs.readFile(path.join(__dirname, 'main', 'online', 'online.txt'), (err_1, data_1) => {
+            if (err_1) {
+                console.log(err_1)
             }
 
 
-            fs.appendFile(path.join(__dirname, 'main', 'inPerson', 'inPerson.txt'), `${data1.toString()}`, {flag: "w"}, err2 => {
-                if (err2) {
-                    console.log(err2)
+            fs.appendFile(path.join(__dirname, 'main', 'inPerson', 'inPerson.txt'), `${data_1.toString()}`, {flag: "w"}, err_2 => {
+                if (err_2) {
+                    console.log(err_2)
                 }
 
-                fs.appendFile(path.join(__dirname, 'main', 'online', 'online.txt'), `${data.toString()}`, {flag: "w"}, err2 => {
-                    if (err2) {
-                        console.log(err2)
+                fs.appendFile(path.join(__dirname, 'main', 'online', 'online.txt'), `${data.toString()}`, {flag: "w"}, err_2 => {
+                    if (err_2) {
+                        console.log(err_2)
                     }
                 });
 
@@ -83,3 +83,4 @@ const change = () => {
 }
 
 change();
+
