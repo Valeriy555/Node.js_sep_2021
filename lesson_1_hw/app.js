@@ -53,26 +53,24 @@ for (const users of inPersonUsers) {
 
 
 const change = () => {
-    fs.readFile(path.join(__dirname, 'main', 'inPerson', 'inPerson.txt'), ((err, data) => {
+    fs.readFile(path.join(__dirname, 'main', 'online', 'online.txt'), ((err, dataOnline) => {
         if (err) {
             console.log(err);
         }
 
-
-        fs.readFile(path.join(__dirname, 'main', 'online', 'online.txt'), (err_1, data_1) => {
-            if (err_1) {
-                console.log(err_1)
+        fs.readFile(path.join(__dirname, 'main', 'inPerson', 'inPerson.txt'), (err, dataInPerson) => {
+            if (err) {
+                console.log(err)
             }
 
-
-            fs.appendFile(path.join(__dirname, 'main', 'inPerson', 'inPerson.txt'), `${data_1.toString()}`, {flag: "w"}, err_2 => {
-                if (err_2) {
-                    console.log(err_2)
+            fs.appendFile(path.join(__dirname, 'main', 'online', 'online.txt'), `${dataInPerson}`, {flag: "w"}, err => {
+                if (err) {
+                    console.log(err)
                 }
 
-                fs.appendFile(path.join(__dirname, 'main', 'online', 'online.txt'), `${data.toString()}`, {flag: "w"}, err_2 => {
-                    if (err_2) {
-                        console.log(err_2)
+                fs.appendFile(path.join(__dirname, 'main',  'inPerson', 'inPerson.txt'), `${dataOnline}`, {flag: "w"}, err => {
+                    if (err) {
+                        console.log(err)
                     }
                 });
 
