@@ -2,12 +2,12 @@
 // в вас вийде невеликий callback hell, пізніше я вам покажу
 // як можна це обійти, але поки зробіть так
 
-import fs from "fs";
-import path from "path";
+const path = require('path');
+const fs = require('fs');
 
-fs.writeFile(path.join(__dirname,'online.txt'),  '', (err) =>{
+fs.writeFile(path.join(__dirname,'file.txt'),  'PRIVET', (err) =>{
     if (err){
         console.log(err);
         throw err;
     }
-} )
+})
